@@ -1,0 +1,374 @@
+body{
+ margin: 0 auto;
+  font-family:'Roboto', sans-serif,'Noto Sans JP', sans-serif; ;
+}
+
+/* reset.cssに記述 */
+li{
+  list-style:none;
+}
+/* baseに記述 */
+a{
+  text-decoration: none;
+  color:#fff;
+}
+
+a:hover{
+  opacity: .7;
+  transition: .3s;
+}
+
+img{
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+h3{
+  letter-spacing: 0.3em;
+  line-height: 2.5rem;
+  margin: 0;
+}
+
+p{
+  line-height: 2em;
+  margin: 0;
+}
+
+.noscroll{
+ overflow: hidden; 
+}
+
+/* point:flexboxをheader navそれぞれに使う */
+.header{
+/*  背景色 */
+  background-color: #1B1310;
+/*  文字色 */
+  color: #fff;
+/* 高さ指定 */
+  height:74px;
+/* 要素の横並び（flexbox） */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+/* 左右の余白 */
+  padding: 0 120px;
+/* 下線 */
+  border-bottom:1px solid #fff;
+  
+}
+.nav-list{
+  /* navの横並び */
+  display: flex;
+}
+.nav-item{
+  /* メニューの右側に余白 */
+  margin-right: 40px;
+  padding-top: -5px;
+}
+
+.burger-btn{
+  display: none;
+}
+
+.fv{
+/* 画面の高さの90に指定 */
+height:95vh;
+/* 背景画像の設定 */
+background-color:#141414;
+/* メインコピーの上下左右中央寄せ */
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+background-image: url(../img/fv-bgi@2x.jpg);
+background-position: right bottom ;
+background-repeat: no-repeat;
+
+}
+.main-copy{
+ font-size: 5rem;
+ color: #fff;
+ font-weight: bold;
+ border:2px solid #fff;
+ padding: 34px 42px;
+}
+
+
+/* base */
+/* point::左右の余白を％、VWで指令でレスポンシブに対応 */
+.section-wrapper{
+  padding:100px 11vw 50px; 
+}
+
+.section-title{
+  text-align: center;
+  line-height: 3rem;
+  margin-bottom: 60px;
+  font-size: 3rem;
+  font-weight: bold;
+  letter-spacing:0.1em;
+}
+
+
+.section-inner{
+  margin: 0 auto;
+  display: flex; 
+  align-items: center; 
+  justify-content:space-between; 
+  margin-bottom: 40px;
+  height: 240px;
+  width:1030px;
+}
+
+.section-inner-r{
+  margin: 0 auto;
+  display: flex; 
+  align-items: center;
+  justify-content:space-between;
+  flex-direction: row-reverse;
+  margin-bottom: 40px;
+  height: 240px;
+  width:1030px;
+}
+
+.txt-wrapper{
+ max-width: 480px;
+ height: 198px;
+ margin-left: 85px;
+}
+
+.txt-wrapper-r{
+  max-width: 480px;
+  height: 198px;
+  margin-right: 70px;
+}
+
+
+.photo-wrapper{
+max-width:100% ;
+vertical-align: bottom;
+
+}
+
+.text_service{
+  margin-top: 15px;
+}
+
+
+.news-content{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-left: 0;
+}
+
+.news-item{
+  width: 320px;
+  height: 323px;
+  box-shadow: 0px 0px 6px  gray;
+  margin-right: 35px;
+}
+
+.news-item:last-of-type{
+  margin-right: 0;
+}
+
+.news-txt{
+  padding: 15px 20px ;
+}
+
+/* point：コンタクトフォームは覚えてしまう */
+.form{
+  max-width: 700px;
+  margin: 0 auto;
+}
+input,textarea{
+  border: 1px solid #141414;
+  padding: 10px;
+}
+.form-part{
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+}
+label{
+  margin-bottom: 5px;
+}
+#input-subject,textarea{
+  line-height: 2;
+  font-size:16px;
+}
+textarea{
+  resize: none;
+  height: 171px;
+}
+.form-send{
+  text-align: center;
+  margin-top: 50px;
+}
+.form-btn{
+  display: inline-block;
+  width: 235px;
+/*   codepenだと挙動が変わるため変更しています */
+  padding: 10px 30px;
+  border-radius: 30px;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  background-color: #1B1310;
+  box-shadow: 0px 0px 6px #1B1310;
+}
+
+.footer{
+background-color: #1B1310;
+font-size:12px;
+color: #fff;
+height: 74px;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+@media(max-width:768px){
+
+
+  .header{
+   padding:0 5% ;
+  }
+
+/* ハンバーガーメニュー */
+  .burger-btn{
+    display: block;
+    width:40px;
+    height:40px;
+    position: relative;
+    z-index:3;
+    background-color: transparent; 
+    border: none;
+  }
+
+  .bars{
+    width: 30px;
+    height: 2px;
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+  }
+
+  .bar_top{
+    top: 10px;
+    height:2px;
+  }
+   .bar_mid{  
+    top: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .bar_bottom{
+    bottom: 10px;
+    height: 2px;
+  }
+  
+  .burger-btn.close .bar_top{
+    
+    transform: translate(-50%,-10px) rotate(-50deg);
+    transition: transform .3s;
+  }
+
+  .burger-btn.close .bar_mid{ 
+    
+    background-color:#1B1310;
+    
+  }
+
+  .burger-btn.close .bar_bottom{
+    
+    transform: translate(-50%,10px) rotate(50deg);
+    transition: transform .3s;
+  }
+    
+  button{
+    background-color: transparent;
+    border:none;
+    cursor:pointer;
+    outline: none;
+    padding: 0;
+    appearance: none;
+  }
+  /* /ハンバーガーメニュー */
+  
+  .nav-wrapper{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;/*キービジュアルと.btn_triggerとの重なりの前後関係を調整*/
+   }
+  .header-nav{
+     width: 100%;
+     height: 100%;
+     background-color: #1B1310;
+     z-index: 2;
+    }
+    .header-nav .nav-list{
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      text-align: center;
+      background-color: #1B1310;
+    }
+    .header-nav .nav-item{
+      margin-right: 0;
+      margin-bottom: 40px;
+    }
+    
+     /*  */
+
+
+   
+    
+    .fv{
+            background-image: url(../img/fv-bgi_sp@2x.jpg);
+            background-position: center right;
+            background-repeat: no-repeat;
+            background-size: cover;
+    }
+    
+    .main-copy{
+      font-size: 2rem;
+      padding: 20px 100px;
+    }
+  
+    .section-wrapper{
+    padding:50px 2vw 50px;
+  }
+
+  .section-inner , .section-inner-r{
+    width: 700px;
+    height: 450px;
+    flex-direction: column;
+
+  }
+
+  .txt-wrapper,.txt-wrapper-r{
+    margin: 0;
+  }
+   
+  .news-content{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .news-item{
+    margin:0 0 20px;
+    width:100;
+  }
+  
+}
